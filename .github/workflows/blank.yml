@@ -35,3 +35,9 @@ jobs:
           find .
           export -p
           dpkg -l
+
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: getwd
+      run: pwd
