@@ -40,4 +40,4 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: getwd
-      run: pwd
+        run: pwd
