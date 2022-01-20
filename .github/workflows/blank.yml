@@ -34,3 +34,4 @@ jobs:
         run: |
           find .
           export -p
+          dpkg -l
