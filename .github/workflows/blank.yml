@@ -46,3 +46,5 @@ jobs:
           Start-BitsTransfer https://www.swi-prolog.org/download/devel/bin/swipl-8.5.5-1.x64.exe
           ls
           .\swipl-8.5.5-1.x64.exe
+      - name: test
+        run: swipl -g "write(hello)"
