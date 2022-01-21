@@ -44,4 +44,4 @@ jobs:
 
       - name: test
         run: |
-          & "${env:ProgramFiles}\swipl\bin\swipl.exe" -g "write(hello)"
+          & ${env:ProgramFiles}\swipl\bin\swipl.exe -g "load_test_files([])" -g run_tests
