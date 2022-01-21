@@ -24,6 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      # https://www.swi-prolog.org/build/PPA.html
       - name: Install SWI-Prolog via PPA
         run: |
           sudo apt-get install software-properties-common
