@@ -47,7 +47,7 @@ jobs:
       - name: refreshenv
         run: |
           refreshenv
-          swipl -g write(hello)
+          swipl -g "write(hello)"
 
       - name: Transfer swipl
         run: |
