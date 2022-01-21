@@ -15,12 +15,8 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build-ubuntu:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v2
 
@@ -45,6 +41,8 @@ jobs:
       # Install stable SWI-Prolog using Chocolatey. GitHub's Windows runner
       # comes pre-equipped with Chocolatey. Sets up the latest **stable**
       # release rather than the development version.
+      #
+      # See https://community.chocolatey.org/packages/SWI-Prolog for details.
       - name: Chocolatey install SWI-Prolog
         run: choco install SWI-Prolog
 
