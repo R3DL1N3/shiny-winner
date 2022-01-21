@@ -42,10 +42,10 @@ jobs:
       - name: getwd
         run: pwd
 
-      - name: Choco help
+      - name: Choco SWI-Prolog
         uses: crazy-max/ghaction-chocolatey@v1
         with:
-          args: -h
+          args: install SWI-Prolog
 
       - name: Transfer swipl
         run: |
