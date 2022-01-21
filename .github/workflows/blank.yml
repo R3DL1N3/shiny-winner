@@ -47,11 +47,8 @@ jobs:
       - name: Chocolatey install SWI-Prolog
         run: choco install SWI-Prolog
 
-      - name: Update session environment
+      - name: Load and run Prolog unit tests
         run: |
           Import-Module $env:ChocolateyInstall\helpers\chocolateyInstaller.psm1
           Update-SessionEnvironment
-
-      - name: Load and run Prolog unit tests
-        run: |
           swipl -g "write(hello)" -g "load_test_files([])" -g run_tests
