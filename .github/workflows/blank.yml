@@ -49,4 +49,4 @@ jobs:
 
       - name: Load and run Prolog unit tests
         run: |
-          ${env:ProgramFiles}\swipl\bin\swipl.exe -g "load_test_files([])" -g run_tests
+          & ${env:ProgramFiles}\swipl\bin\swipl.exe -g "load_test_files([])" -g run_tests
