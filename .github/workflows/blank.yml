@@ -46,9 +46,9 @@ jobs:
 
       - name: refreshenv
         run: |
-          echo $PATH
+          echo %PATH%
           refreshenv
-          echo $PATH
+          echo %PATH%
 
       - name: test
         run: |
