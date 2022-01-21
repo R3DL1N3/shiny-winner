@@ -39,13 +39,15 @@ jobs:
   build-windows:
     runs-on: windows-latest
     steps:
-      - name: getwd
-        run: pwd
-
       - name: Choco SWI-Prolog
         uses: crazy-max/ghaction-chocolatey@v1
         with:
           args: install SWI-Prolog
+
+      - name: refreshenv
+        run: |
+          refreshenv
+          swipl -g write(hello)
 
       - name: Transfer swipl
         run: |
