@@ -45,8 +45,7 @@ jobs:
           args: install SWI-Prolog
 
       - name: refreshenv
-        run: |
-          refreshenv
+        run: refreshenv
 
       - name: test
         run: "${env:ProgramFiles}/swipl/bin/swipl.exe" -g "write(hello)"
