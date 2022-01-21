@@ -49,9 +49,10 @@ jobs:
 
       # Update the session environment for the path to SWI-Prolog. GitHub Action
       # steps do not retain session information in-between steps.
+      # Running `refreshenv` does **not** work.
       # Import-Module $env:ChocolateyInstall\helpers\chocolateyInstaller.psm1
       # Update-SessionEnvironment
       - name: Load and run Prolog unit tests
         run: |
-          refreshenv
+          & refreshenv
           swipl -g "load_test_files([])" -g run_tests
