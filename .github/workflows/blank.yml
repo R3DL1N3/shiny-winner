@@ -41,10 +41,17 @@ jobs:
     steps:
       - name: getwd
         run: pwd
+
+      - name: Choco help
+        uses: crazy-max/ghaction-chocolatey@v1
+        with:
+          args: -h
+
       - name: Transfer swipl
         run: |
           Start-BitsTransfer https://www.swi-prolog.org/download/devel/bin/swipl-8.5.5-1.x64.exe
           ls
           .\swipl-8.5.5-1.x64.exe /S
+
       - name: test
         run: swipl -g "write(hello)"
