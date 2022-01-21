@@ -39,9 +39,14 @@ jobs:
   build-windows:
     runs-on: windows-latest
     steps:
+      - uses: actions/checkout@v2
+
+      # Install stable SWI-Prolog using Chocolatey. GitHub's Windows runner
+      # comes pre-equipped with Chocolatey. Sets up the latest **stable**
+      # release rather than the development version.
       - name: Chocolatey install SWI-Prolog
         run: choco install SWI-Prolog
 
-      - name: test
+      - name: Load and run Prolog unit tests
         run: |
-          & ${env:ProgramFiles}\swipl\bin\swipl.exe -g "load_test_files([])" -g run_tests
+          ${env:ProgramFiles}\swipl\bin\swipl.exe -g "load_test_files([])" -g run_tests
