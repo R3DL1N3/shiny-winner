@@ -60,4 +60,4 @@ jobs:
         run: |
           Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
           Update-SessionEnvironment
-          swipl -g "pack_install(canny_tudor, [interactive(false)])"
+          swipl -g "pack_install(canny_tudor, [interactive(false), test(true)])"
