@@ -46,9 +46,9 @@ jobs:
 
       - name: refreshenv
         run: |
-          echo %PATH%
+          printenv
           refreshenv
-          echo %PATH%
+          printenv
 
       - name: test
         run: |
