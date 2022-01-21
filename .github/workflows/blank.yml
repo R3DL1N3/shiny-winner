@@ -39,10 +39,12 @@ jobs:
   build-windows:
     runs-on: windows-latest
     steps:
+      # - name: Choco SWI-Prolog
+      #   uses: crazy-max/ghaction-chocolatey@v1
+      #   with:
+      #     args: install SWI-Prolog
       - name: Choco SWI-Prolog
-        uses: crazy-max/ghaction-chocolatey@v1
-        with:
-          args: install SWI-Prolog
+        run: choco install SWI-Prolog
 
       - name: refreshenv
         run: |
