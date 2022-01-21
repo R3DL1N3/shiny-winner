@@ -55,3 +55,9 @@ jobs:
           Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
           Update-SessionEnvironment
           swipl -g "load_test_files([])" -g run_tests
+
+      - name: test
+        run: |
+          Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
+          Update-SessionEnvironment
+          swipl -g "pack_install(canny_tudor, [interactive(false)])"
