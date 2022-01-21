@@ -48,10 +48,8 @@ jobs:
         run: choco install SWI-Prolog
 
       # Update the session environment for the path to SWI-Prolog. GitHub Action
-      # steps do not retain session information in-between steps.
-      # Running `refreshenv` does **not** work.
-      # Import-Module $env:ChocolateyInstall\helpers\chocolateyInstaller.psm1
-      # Update-SessionEnvironment
+      # steps do not retain session information in-between steps. Running
+      # `refreshenv` does **not** work.
       - name: Load and run Prolog unit tests
         run: |
           Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
