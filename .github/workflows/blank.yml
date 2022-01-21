@@ -54,5 +54,5 @@ jobs:
       # Update-SessionEnvironment
       - name: Load and run Prolog unit tests
         run: |
-          & refreshenv
+          Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
           swipl -g "load_test_files([])" -g run_tests
