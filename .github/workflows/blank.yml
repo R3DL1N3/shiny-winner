@@ -32,7 +32,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           swipl -g "pack_install(canny_tudor, [interactive(false), test(true)])"
-          swipl -g "[canny/cov]"
+          swipl -g "[library(canny/cov)]"
 
   build-windows:
     runs-on: windows-latest
