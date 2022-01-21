@@ -54,4 +54,4 @@ jobs:
           .\swipl-8.5.5-1.x64.exe /S
 
       - name: test
-        run: swipl -g "write(hello)"
+        run: ${env:ProgramFiles}\swipl\bin\swipl.exe -g "write(hello)"
