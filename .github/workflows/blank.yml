@@ -49,4 +49,5 @@ jobs:
 
       - name: Load and run Prolog unit tests
         run: |
+          Import-Module $env:ChocolateyInstall\helpers\chocolateyInstaller.psm1
           & ${env:ProgramFiles}\swipl\bin\swipl.exe -g "load_test_files([])" -g run_tests
