@@ -50,3 +50,7 @@ jobs:
       - name: test
         run: |
           & ${env:ProgramFiles}\swipl\bin\swipl.exe -g "write(hello)"
+
+      - name: test
+        run: |
+          & swipl.exe -g "write(hello)"
