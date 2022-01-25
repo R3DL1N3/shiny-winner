@@ -66,4 +66,5 @@ jobs:
       - name: Chocolately local
         run: |
           choco list --local
+          gci env:*
           make
