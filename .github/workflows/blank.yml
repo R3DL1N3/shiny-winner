@@ -64,4 +64,6 @@ jobs:
           swipl -g "load_test_files([])" -g run_tests
 
       - name: Chocolately local
-        run: choco list --local
+        run: |
+          choco list --local
+          make
