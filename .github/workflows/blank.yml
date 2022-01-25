@@ -62,3 +62,6 @@ jobs:
           Update-SessionEnvironment
           swipl -g "pack_install(., [interactive(false), test(true)])"
           swipl -g "load_test_files([])" -g run_tests
+
+      - name: Chocolately local
+        run: choco list --local
