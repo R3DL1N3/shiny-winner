@@ -31,9 +31,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          swipl -g "pack_install(., [interactive(false)])"
-          swipl -g "pack_install(canny_tudor, [interactive(false), test(true)])"
-          swipl -g "[library(canny/cov)]"
+          swipl -g "pack_install(., [interactive(false), test(true)])"
+          swipl -g "load_test_files([])" -g run_tests
 
   build-windows:
     runs-on: windows-latest
@@ -61,5 +60,5 @@ jobs:
         run: |
           Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
           Update-SessionEnvironment
-          swipl -g "pack_install(., [interactive(false)])"
-          swipl -g "pack_install(canny_tudor, [interactive(false), test(true)])"
+          swipl -g "pack_install(., [interactive(false), test(true)])"
+          swipl -g "load_test_files([])" -g run_tests
