@@ -48,7 +48,9 @@ jobs:
         run: choco install SWI-Prolog
 
       - name: Chocolatey install MSYS2
-        run: choco install msys2
+        run: |
+          choco install msys2 --params "/NoUpdate /InstallDir:C:\msys64"
+          ls C:\msys64
 
       # Update the session environment for the path to SWI-Prolog. GitHub Action
       # steps do not retain session information in-between steps. Running
