@@ -47,6 +47,9 @@ jobs:
       - name: Chocolatey install SWI-Prolog
         run: choco install SWI-Prolog
 
+      - name: Chocolatey install MSYS2
+        run: choco install msys2
+
       # Update the session environment for the path to SWI-Prolog. GitHub Action
       # steps do not retain session information in-between steps. Running
       # `refreshenv` does **not** work.
