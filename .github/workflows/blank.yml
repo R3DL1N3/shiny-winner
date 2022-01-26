@@ -1,0 +1,75 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # https://www.swi-prolog.org/build/PPA.html
+      - name: Install SWI-Prolog via PPA
+        run: |
+          sudo apt-get install software-properties-common
+          sudo apt-add-repository ppa:swi-prolog/stable
+          sudo apt-get update
+          sudo apt-get install swi-prolog-nox
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          swipl -g "pack_install(., [interactive(false), test(true)])"
+          swipl -g "load_test_files([])" -g run_tests
+
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # Install stable SWI-Prolog using Chocolatey. GitHub's Windows runner
+      # comes pre-equipped with Chocolatey. Sets up the latest **stable**
+      # release rather than the development version.
+      #
+      # See https://community.chocolatey.org/packages/SWI-Prolog for details.
+      - name: Chocolatey install SWI-Prolog
+        run: choco install SWI-Prolog
+
+      - name: Chocolatey install MSYS2
+        run: |
+          choco install msys2 --params "/NoUpdate /InstallDir:C:\msys64"
+          ls C:\msys64
+
+      # Update the session environment for the path to SWI-Prolog. GitHub Action
+      # steps do not retain session information in-between steps. Running
+      # `refreshenv` does **not** work.
+      - name: Load and run Prolog unit tests
+        run: |
+          Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
+          Update-SessionEnvironment
+          swipl -g "load_test_files([])" -g run_tests
+
+      - name: test
+        run: |
+          Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
+          Update-SessionEnvironment
+          swipl -g "pack_install(., [interactive(false), test(true)])"
+          swipl -g "load_test_files([])" -g run_tests
+
+      - name: Chocolately local
+        run: |
+          choco list --local
+          gci env:*
+          make
