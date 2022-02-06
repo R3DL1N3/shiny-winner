@@ -9,6 +9,22 @@
     ]
   },
   "Packages": {
+    "XML": {
+      "Package": "XML",
+      "Version": "3.99-0.8",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "d493b952a9073c62f72392a673d7c548",
+      "Requirements": []
+    },
+    "backports": {
+      "Package": "backports",
+      "Version": "1.4.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "c39fbec8a30d23e721980b8afb31984c",
+      "Requirements": []
+    },
     "base64enc": {
       "Package": "base64enc",
       "Version": "0.1-3",
@@ -81,6 +97,16 @@
       "Hash": "de07842fc27ebf60e1102091c0c85e47",
       "Requirements": []
     },
+    "grImport": {
+      "Package": "grImport",
+      "Version": "0.9-5",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "fffdf67fbc7d9677ef0dcd0020fcfcda",
+      "Requirements": [
+        "XML"
+      ]
+    },
     "highr": {
       "Package": "highr",
       "Version": "0.9",
@@ -142,6 +168,32 @@
       "Source": "Repository",
       "Repository": "RSPM",
       "Hash": "cdc87ecd81934679d1557633d8e1fe51",
+      "Requirements": []
+    },
+    "plantuml": {
+      "Package": "plantuml",
+      "Version": "0.4",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "rkrug",
+      "RemoteRepo": "plantuml",
+      "RemoteRef": "master",
+      "RemoteSha": "361e33168d1168e17e45c4d0aa74ae1937ec20ab",
+      "Hash": "ba5bc9fc6ce142975d5bb89b16cec272",
+      "Requirements": [
+        "backports",
+        "grImport",
+        "magrittr",
+        "png"
+      ]
+    },
+    "png": {
+      "Package": "png",
+      "Version": "0.1-7",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "03b7076c234cb3331288919983326c55",
       "Requirements": []
     },
     "renv": {
