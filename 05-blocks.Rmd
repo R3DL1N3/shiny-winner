@@ -1,5 +1,18 @@
 # Blocks
 
+```{plantuml plantuml.format=ifelse(knitr::is_html_output(), "svg", "eps")}
+(*) --> "Initialization"
+
+if "Some Test" then
+  -->[true] "Some Activity"
+  --> "Another activity"
+  -right-> (*)
+else
+  ->[false] "Something else"
+  -->[Ending process] (*)
+endif
+```
+
 Is Docker available?
 ```{r}
 stevedore::docker_available()
