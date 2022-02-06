@@ -1,5 +1,10 @@
 # Blocks
 
+Is Docker available?
+```{r}
+stevedore::docker_available()
+```
+
 ## Equations
 
 Here is an equation.

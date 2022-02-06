@@ -33,6 +33,22 @@
         "yaml"
       ]
     },
+    "crayon": {
+      "Package": "crayon",
+      "Version": "1.4.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "0a6a65d92bd45b47b94b84244b528d17",
+      "Requirements": []
+    },
+    "curl": {
+      "Package": "curl",
+      "Version": "4.3.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "022c42d49c28e95d69ca60446dbabf88",
+      "Requirements": []
+    },
     "digest": {
       "Package": "digest",
       "Version": "0.6.29",
@@ -159,6 +175,19 @@
         "stringr",
         "tinytex",
         "xfun",
+        "yaml"
+      ]
+    },
+    "stevedore": {
+      "Package": "stevedore",
+      "Version": "0.9.4",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "0d42386a9ee7f97f21efdf1f8515202b",
+      "Requirements": [
+        "crayon",
+        "curl",
+        "jsonlite",
         "yaml"
       ]
     },
