@@ -224,13 +224,23 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="blocks" class="section level1" number="6">
 <h1><span class="header-section-number">Chapter 6</span> Blocks</h1>
+<pre class="plantuml"><code>(*) --&gt; &quot;Initialization&quot;
+
+if &quot;Some Test&quot; then
+  --&gt;[true] &quot;Some Activity&quot;
+  --&gt; &quot;Another activity&quot;
+  -right-&gt; (*)
+else
+  -&gt;[false] &quot;Something else&quot;
+  --&gt;[Ending process] (*)
+endif</code></pre>
 <p>Is Docker available?</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="blocks.html#cb5-1" aria-hidden="true" tabindex="-1"></a>stevedore<span class="sc">::</span><span class="fu">docker_available</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="blocks.html#cb6-1" aria-hidden="true" tabindex="-1"></a>stevedore<span class="sc">::</span><span class="fu">docker_available</span>()</span></code></pre></div>
 <pre><code>## Detected API version &#39;1.41&#39; is above max version &#39;1.39&#39;; downgrading</code></pre>
 <pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="blocks.html#cb8-1" aria-hidden="true" tabindex="-1"></a>docker <span class="ot">&lt;-</span> stevedore<span class="sc">::</span><span class="fu">docker_client</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="blocks.html#cb9-1" aria-hidden="true" tabindex="-1"></a>docker <span class="ot">&lt;-</span> stevedore<span class="sc">::</span><span class="fu">docker_client</span>()</span></code></pre></div>
 <pre><code>## Detected API version &#39;1.41&#39; is above max version &#39;1.39&#39;; downgrading</code></pre>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="blocks.html#cb10-1" aria-hidden="true" tabindex="-1"></a>docker<span class="sc">$</span><span class="fu">info</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="blocks.html#cb11-1" aria-hidden="true" tabindex="-1"></a>docker<span class="sc">$</span><span class="fu">info</span>()</span></code></pre></div>
 <pre><code>## $id
 ## [1] &quot;YR5N:52VJ:F2NJ:BVMB:I7TN:VXT7:HQNC:HKT6:BSC3:UKB7:3FZE:7IZP&quot;
 ## 
@@ -330,7 +340,7 @@ div.csl-indent {
 ## [1] 33
 ## 
 ## $system_time
-## [1] &quot;2022-02-06T09:16:37.001853596Z&quot;
+## [1] &quot;2022-02-06T09:59:38.178799231Z&quot;
 ## 
 ## $logging_driver
 ## [1] &quot;json-file&quot;
@@ -406,7 +416,7 @@ div.csl-indent {
 ## [1] &quot;&quot;
 ## 
 ## $name
-## [1] &quot;fv-az128-476&quot;
+## [1] &quot;fv-az124-646&quot;
 ## 
 ## $labels
 ## character(0)
