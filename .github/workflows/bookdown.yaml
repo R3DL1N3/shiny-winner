@@ -36,6 +36,9 @@ jobs:
         run: bookdown::render_book("index.Rmd", quiet = TRUE)
         shell: Rscript {0}
 
+      - name: No Jekyll
+        run: touch _book/.nojekyll
+
       - name: Deploy to GitHub pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4.2.3
         with:
