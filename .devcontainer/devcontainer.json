@@ -18,6 +18,15 @@
 		}
 	},
 
+	// https://code.visualstudio.com/docs/remote/create-dev-container
+	// https://github.com/Microsoft/vscode-dev-containers
+	"features": {
+		"docker-in-docker": {
+			"version": "latest",
+			"moby": true
+		}
+	},
+
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"ikuyadeu.r",
