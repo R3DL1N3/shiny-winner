@@ -228,6 +228,301 @@ div.csl-indent {
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="blocks.html#cb5-1" aria-hidden="true" tabindex="-1"></a>stevedore<span class="sc">::</span><span class="fu">docker_available</span>()</span></code></pre></div>
 <pre><code>## Detected API version &#39;1.41&#39; is above max version &#39;1.39&#39;; downgrading</code></pre>
 <pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="blocks.html#cb8-1" aria-hidden="true" tabindex="-1"></a>docker <span class="ot">&lt;-</span> stevedore<span class="sc">::</span><span class="fu">docker_client</span>()</span></code></pre></div>
+<pre><code>## Detected API version &#39;1.41&#39; is above max version &#39;1.39&#39;; downgrading</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="blocks.html#cb10-1" aria-hidden="true" tabindex="-1"></a>docker<span class="sc">$</span><span class="fu">info</span>()</span></code></pre></div>
+<pre><code>## $id
+## [1] &quot;YR5N:52VJ:F2NJ:BVMB:I7TN:VXT7:HQNC:HKT6:BSC3:UKB7:3FZE:7IZP&quot;
+## 
+## $containers
+## [1] 0
+## 
+## $containers_running
+## [1] 0
+## 
+## $containers_paused
+## [1] 0
+## 
+## $containers_stopped
+## [1] 0
+## 
+## $images
+## [1] 19
+## 
+## $driver
+## [1] &quot;overlay2&quot;
+## 
+## $driver_status
+## $driver_status[[1]]
+## [1] &quot;Backing Filesystem&quot; &quot;extfs&quot;             
+## 
+## $driver_status[[2]]
+## [1] &quot;Supports d_type&quot; &quot;true&quot;           
+## 
+## $driver_status[[3]]
+## [1] &quot;Native Overlay Diff&quot; &quot;false&quot;              
+## 
+## $driver_status[[4]]
+## [1] &quot;userxattr&quot; &quot;false&quot;    
+## 
+## 
+## $docker_root_dir
+## [1] &quot;/var/lib/docker&quot;
+## 
+## $system_status
+## list()
+## 
+## $plugins
+## $plugins$volume
+## [1] &quot;local&quot;
+## 
+## $plugins$network
+## [1] &quot;bridge&quot;  &quot;host&quot;    &quot;ipvlan&quot;  &quot;macvlan&quot; &quot;null&quot;    &quot;overlay&quot;
+## 
+## $plugins$authorization
+## character(0)
+## 
+## $plugins$log
+##  [1] &quot;awslogs&quot;    &quot;fluentd&quot;    &quot;gcplogs&quot;    &quot;gelf&quot;       &quot;journald&quot;  
+##  [6] &quot;json-file&quot;  &quot;local&quot;      &quot;logentries&quot; &quot;splunk&quot;     &quot;syslog&quot;    
+## 
+## 
+## $memory_limit
+## [1] TRUE
+## 
+## $swap_limit
+## [1] TRUE
+## 
+## $kernel_memory
+## [1] TRUE
+## 
+## $cpu_cfs_period
+## [1] TRUE
+## 
+## $cpu_cfs_quota
+## [1] TRUE
+## 
+## $cpu_shares
+## [1] TRUE
+## 
+## $cpu_set
+## [1] TRUE
+## 
+## $oom_kill_disable
+## [1] TRUE
+## 
+## $ipv4_forwarding
+## [1] TRUE
+## 
+## $bridge_nf_iptables
+## [1] TRUE
+## 
+## $bridge_nf_ip6tables
+## [1] TRUE
+## 
+## $debug
+## [1] FALSE
+## 
+## $n_fd
+## [1] 24
+## 
+## $n_goroutines
+## [1] 33
+## 
+## $system_time
+## [1] &quot;2022-02-06T09:16:37.001853596Z&quot;
+## 
+## $logging_driver
+## [1] &quot;json-file&quot;
+## 
+## $cgroup_driver
+## [1] &quot;cgroupfs&quot;
+## 
+## $n_events_listener
+## [1] 0
+## 
+## $kernel_version
+## [1] &quot;5.11.0-1028-azure&quot;
+## 
+## $operating_system
+## [1] &quot;Ubuntu 20.04.3 LTS&quot;
+## 
+## $os_type
+## [1] &quot;linux&quot;
+## 
+## $architecture
+## [1] &quot;x86_64&quot;
+## 
+## $n_cpu
+## [1] 2
+## 
+## $mem_total
+## [1] 7284850688
+## 
+## $index_server_address
+## [1] &quot;https://index.docker.io/v1/&quot;
+## 
+## $registry_config
+## $registry_config$allow_nondistributable_artifacts_cidrs
+## character(0)
+## 
+## $registry_config$allow_nondistributable_artifacts_hostnames
+## character(0)
+## 
+## $registry_config$insecure_registry_cidrs
+## [1] &quot;127.0.0.0/8&quot;
+## 
+## $registry_config$index_configs
+## $registry_config$index_configs$docker.io
+## $registry_config$index_configs$docker.io$name
+## [1] &quot;docker.io&quot;
+## 
+## $registry_config$index_configs$docker.io$mirrors
+## character(0)
+## 
+## $registry_config$index_configs$docker.io$secure
+## [1] TRUE
+## 
+## $registry_config$index_configs$docker.io$official
+## [1] TRUE
+## 
+## 
+## 
+## $registry_config$mirrors
+## character(0)
+## 
+## 
+## $generic_resources
+## [1] named_resource_spec    discrete_resource_spec
+## &lt;0 rows&gt; (or 0-length row.names)
+## 
+## $http_proxy
+## [1] &quot;&quot;
+## 
+## $https_proxy
+## [1] &quot;&quot;
+## 
+## $no_proxy
+## [1] &quot;&quot;
+## 
+## $name
+## [1] &quot;fv-az128-476&quot;
+## 
+## $labels
+## character(0)
+## 
+## $experimental_build
+## [1] FALSE
+## 
+## $server_version
+## [1] &quot;20.10.11+azure-3&quot;
+## 
+## $cluster_store
+## [1] NA
+## 
+## $cluster_advertise
+## [1] NA
+## 
+## $runtimes
+## $runtimes$io.containerd.runc.v2
+## $runtimes$io.containerd.runc.v2$path
+## [1] &quot;runc&quot;
+## 
+## $runtimes$io.containerd.runc.v2$runtime_args
+## character(0)
+## 
+## 
+## $runtimes$io.containerd.runtime.v1.linux
+## $runtimes$io.containerd.runtime.v1.linux$path
+## [1] &quot;runc&quot;
+## 
+## $runtimes$io.containerd.runtime.v1.linux$runtime_args
+## character(0)
+## 
+## 
+## $runtimes$runc
+## $runtimes$runc$path
+## [1] &quot;runc&quot;
+## 
+## $runtimes$runc$runtime_args
+## character(0)
+## 
+## 
+## 
+## $default_runtime
+## [1] &quot;runc&quot;
+## 
+## $swarm
+## $swarm$node_id
+## [1] &quot;&quot;
+## 
+## $swarm$node_addr
+## [1] &quot;&quot;
+## 
+## $swarm$local_node_state
+## [1] &quot;inactive&quot;
+## 
+## $swarm$control_available
+## [1] FALSE
+## 
+## $swarm$error
+## [1] &quot;&quot;
+## 
+## $swarm$remote_managers
+## [1] node_id addr   
+## &lt;0 rows&gt; (or 0-length row.names)
+## 
+## $swarm$nodes
+## [1] NA
+## 
+## $swarm$managers
+## [1] NA
+## 
+## $swarm$cluster
+## NULL
+## 
+## 
+## $live_restore_enabled
+## [1] FALSE
+## 
+## $isolation
+## [1] &quot;&quot;
+## 
+## $init_binary
+## [1] &quot;docker-init&quot;
+## 
+## $containerd_commit
+## $containerd_commit$id
+## [1] &quot;7b11cfaabd73bb80907dd23182b9347b4245eb5d&quot;
+## 
+## $containerd_commit$expected
+## [1] &quot;7b11cfaabd73bb80907dd23182b9347b4245eb5d&quot;
+## 
+## 
+## $runc_commit
+## $runc_commit$id
+## [1] &quot;f46b6ba2c9314cfc8caae24a32ec5fe9ef1059fe&quot;
+## 
+## $runc_commit$expected
+## [1] &quot;f46b6ba2c9314cfc8caae24a32ec5fe9ef1059fe&quot;
+## 
+## 
+## $init_commit
+## $init_commit$id
+## [1] &quot;&quot;
+## 
+## $init_commit$expected
+## [1] &quot;&quot;
+## 
+## 
+## $security_options
+## [1] &quot;name=apparmor&quot;                &quot;name=seccomp,profile=default&quot;
+## 
+## $product_license
+## [1] NA
+## 
+## $warnings
+## character(0)</code></pre>
 <div id="equations" class="section level2" number="6.1">
 <h2><span class="header-section-number">6.1</span> Equations</h2>
 <p>Here is an equation.</p>
