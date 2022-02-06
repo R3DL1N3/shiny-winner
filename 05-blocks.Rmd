@@ -1,5 +1,9 @@
 # Blocks
 
+```{r}
+plantuml::plantuml_knit_engine_register()
+```
+
 ```{plantuml plantuml.format=ifelse(knitr::is_html_output(), "svg", "eps")}
 (*) --> "Initialization"
 
