@@ -3,6 +3,8 @@
 Is Docker available?
 ```{r}
 stevedore::docker_available()
+docker <- stevedore::docker_client()
+docker$info()
 ```
 
 ## Equations
